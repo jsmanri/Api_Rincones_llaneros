@@ -57,12 +57,6 @@ func init() {
 				&controllers.EventosController{},
 			),
 		),
-
-		beego.NSNamespace("/Ranking",
-			beego.NSInclude(
-				&controllers.RankingController{},
-			),
-		),
 	)
 	beego.AddNamespace(ns)
 }
