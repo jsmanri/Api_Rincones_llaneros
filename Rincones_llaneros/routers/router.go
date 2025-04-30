@@ -8,7 +8,7 @@
 package routers
 
 import (
-	"github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers"
+	"github.com/Franckk24/Api_Rincones_llaneros/Rincones_llaneros/controllers"
 
 	"github.com/astaxie/beego"
 )
@@ -55,12 +55,6 @@ func init() {
 		beego.NSNamespace("/Eventos",
 			beego.NSInclude(
 				&controllers.EventosController{},
-			),
-		),
-
-		beego.NSNamespace("/Ranking",
-			beego.NSInclude(
-				&controllers.RankingController{},
 			),
 		),
 	)

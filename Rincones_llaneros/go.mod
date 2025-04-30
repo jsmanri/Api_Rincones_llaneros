@@ -1,6 +1,6 @@
-module github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros
+module github.com/Franckk24/Api_Rincones_llaneros/Rincones_llaneros
 
-go 1.23.1
+go 1.24.0
 
 require (
 	github.com/astaxie/beego v1.12.3

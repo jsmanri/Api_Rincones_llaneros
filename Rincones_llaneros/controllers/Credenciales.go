@@ -3,9 +3,10 @@ package controllers
 import (
 	"encoding/json"
 	"errors"
-	"github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/models"
 	"strconv"
 	"strings"
+
+	"github.com/Franckk24/Api_Rincones_llaneros/Rincones_llaneros/models"
 
 	"github.com/astaxie/beego"
 )
