@@ -153,6 +153,47 @@ func (c *UsuariosController) Put() {
 	c.ServeJSON()
 }
 
+
+// Patch ...
+// @Title Patch
+// @Description update partially the Usuarios (por ejemplo solo campo Activo)
+// @Param	id		path 	string	true		"The id of the user to update"
+// @Param	body		body 	map[string]interface{}	true		"fields to update"
+// @Success 200 {object} models.Usuarios
+// @Failure 400 invalid input
+// @router /:id [patch]
+func (c *UsuariosController) Patch() {
+	idStr := c.Ctx.Input.Param(":id")
+	id, err := strconv.Atoi(idStr)
+	if err != nil {
+		c.Data["json"] = "ID inválido"
+		c.ServeJSON()
+		return
+	}
+
+	// Leer el cuerpo como un mapa de campos dinámicos
+	var updateData map[string]interface{}
+	if err := json.Unmarshal(c.Ctx.Input.RequestBody, &updateData); err != nil {
+		c.Data["json"] = "Error al parsear JSON"
+		c.ServeJSON()
+		return
+	}
+
+	// Ejecutar la actualización parcial
+	if err := models.PatchUsuario(id, updateData); err != nil {
+		c.Data["json"] = err.Error()
+	} else {
+		c.Data["json"] = map[string]interface{}{
+			"success": true,
+			"status":  200,
+			"Message": "Actualización parcial correcta",
+			"id":      id,
+			"campos_actualizados": updateData,
+		}
+	}
+	c.ServeJSON()
+}
+
 // Delete ...
 // @Title Delete
 // @Description delete the Usuarios

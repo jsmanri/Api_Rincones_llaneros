@@ -150,6 +150,18 @@ func UpdateUsuariosById(m *Usuarios) (err error) {
 	return
 }
 
+
+func PatchUsuario(id int, updates map[string]interface{}) error {
+	o := orm.NewOrm()
+	if len(updates) == 0 {
+		return errors.New("no hay datos para actualizar")
+	}
+	_, err := o.QueryTable(new(Usuarios)).Filter("Id", id).Update(updates)
+	return err
+}
+
+
+
 // DeleteUsuarios deletes Usuarios by Id and returns error if
 // the record to be deleted doesn't exist
 func DeleteUsuarios(id int) (err error) {
