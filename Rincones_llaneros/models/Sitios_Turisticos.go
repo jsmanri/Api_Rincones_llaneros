@@ -15,6 +15,8 @@ type SitiosTuristicos struct {
 	NombreSitioTuristico      string      `orm:"column(Nombre_Sitio_turistico)"`
 	DescripcionSitioTuristico string      `orm:"column(Descripcion_Sitio_turistico)"`
 	Ubicacion                 string      `orm:"column(Ubicacion)"`
+	Latitud                   float64     `orm:"column(Latitud)"`
+	Longitud                  float64     `orm:"column(Longitud)"`
 	Horario                   string      `orm:"column(Horario)"`
 	IdUsuario                 *Usuarios   `orm:"column(Id_Usuario);rel(fk)"`
 	IdCategoria               *Categorias `orm:"column(Id_Categoria);rel(fk)"`
