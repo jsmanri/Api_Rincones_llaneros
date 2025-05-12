@@ -1,7 +1,7 @@
 package main
 
 import (
-	_ "github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/routers"
+	_ "github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/routers"
 
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/orm"
@@ -16,4 +16,3 @@ func main() {
 	}
 	beego.Run()
 }
-

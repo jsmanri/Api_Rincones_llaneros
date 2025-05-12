@@ -10,33 +10,25 @@ import (
 	"github.com/astaxie/beego/orm"
 )
 
-type SitiosTuristicos struct {
-	Id                        int         `orm:"column(Id_sitio_turistico);pk;auto"`
-	NombreSitioTuristico      string      `orm:"column(Nombre_Sitio_turistico)"`
-	DescripcionSitioTuristico string      `orm:"column(Descripcion_Sitio_turistico)"`
-	Ubicacion                 string      `orm:"column(Ubicacion)"`
-	Horario                   string      `orm:"column(Horario)"`
-	IdUsuario                 *Usuarios   `orm:"column(Id_Usuario);rel(fk)"`
-	IdCategoria               *Categorias `orm:"column(Id_Categoria);rel(fk)"`
-	FotoSitio                 string      `orm:"column(Foto_Sitio);type(text)"`
-	FechaCreacion             time.Time   `orm:"column(Fecha_creacion);type(timestamp with time zone);auto_now_add"`
-	FechaModifcacion          time.Time   `orm:"column(Fecha_modifcacion);type(timestamp with time zone);auto_now"`
-	Activo                    bool        `orm:"column(Activo)"`
-	Latitud                   float64     `orm:"column(Latitud);null"`
-	Longitud                  float64     `orm:"column(Longitud);null"`
+type Municipios struct {
+	Id                int       `orm:"column(Id_Municipios);pk;auto"`
+	NombreMunicipio   string    `orm:"column(Nombre_Municipio)"`
+	FechaCreacion     time.Time `orm:"column(Fecha_creacion);type(timestamp with time zone);auto_now_add"`
+	FechaModificacion time.Time `orm:"column(Fecha_modificacion);type(timestamp with time zone);auto_now"`
+	Activo            bool      `orm:"column(Activo)"`
 }
 
-func (t *SitiosTuristicos) TableName() string {
-	return "Sitios_Turisticos"
+func (t *Municipios) TableName() string {
+	return "Municipios"
 }
 
 func init() {
-	orm.RegisterModel(new(SitiosTuristicos))
+	orm.RegisterModel(new(Municipios))
 }
 
-// AddSitiosTuristicos insert a new SitiosTuristicos into database and returns
+// AddMunicipios insert a new Municipios into database and returns
 // last inserted Id on success.
-func AddSitiosTuristicos(m *SitiosTuristicos) (id int64, err error) {
+func AddMunicipios(m *Municipios) (id int64, err error) {
 	o := orm.NewOrm()
 	if !m.Activo {
 		m.Activo = true
@@ -45,23 +37,24 @@ func AddSitiosTuristicos(m *SitiosTuristicos) (id int64, err error) {
 	return
 }
 
-// GetSitiosTuristicosById retrieves SitiosTuristicos by Id. Returns error if
+
+// GetMunicipiosById retrieves Municipios by Id. Returns error if
 // Id doesn't exist
-func GetSitiosTuristicosById(id int) (v *SitiosTuristicos, err error) {
+func GetMunicipiosById(id int) (v *Municipios, err error) {
 	o := orm.NewOrm()
-	v = &SitiosTuristicos{Id: id}
+	v = &Municipios{Id: id}
 	if err = o.Read(v); err == nil {
 		return v, nil
 	}
 	return nil, err
 }
 
-// GetAllSitiosTuristicos retrieves all SitiosTuristicos matches certain condition. Returns empty list if
+// GetAllMunicipios retrieves all Municipios matches certain condition. Returns empty list if
 // no records exist
-func GetAllSitiosTuristicos(query map[string]string, fields []string, sortby []string, order []string,
+func GetAllMunicipios(query map[string]string, fields []string, sortby []string, order []string,
 	offset int64, limit int64) (ml []interface{}, err error) {
 	o := orm.NewOrm()
-	qs := o.QueryTable(new(SitiosTuristicos)).RelatedSel()
+	qs := o.QueryTable(new(Municipios))
 	// query k=v
 	for k, v := range query {
 		// rewrite dot-notation to Object__Attribute
@@ -84,7 +77,7 @@ func GetAllSitiosTuristicos(query map[string]string, fields []string, sortby []s
 				} else if order[i] == "asc" {
 					orderby = v
 				} else {
-					return nil, errors.New("error: Invalid order. Must be either [asc|desc]")
+					return nil, errors.New("Error: Invalid order. Must be either [asc|desc]")
 				}
 				sortFields = append(sortFields, orderby)
 			}
@@ -98,20 +91,20 @@ func GetAllSitiosTuristicos(query map[string]string, fields []string, sortby []s
 				} else if order[0] == "asc" {
 					orderby = v
 				} else {
-					return nil, errors.New("error: Invalid order. Must be either [asc|desc]")
+					return nil, errors.New("Error: Invalid order. Must be either [asc|desc]")
 				}
 				sortFields = append(sortFields, orderby)
 			}
 		} else if len(sortby) != len(order) && len(order) != 1 {
-			return nil, errors.New("error: 'sortby', 'order' sizes mismatch or 'order' size is not 1")
+			return nil, errors.New("Error: 'sortby', 'order' sizes mismatch or 'order' size is not 1")
 		}
 	} else {
 		if len(order) != 0 {
-			return nil, errors.New("error: unused 'order' fields")
+			return nil, errors.New("Error: unused 'order' fields")
 		}
 	}
 
-	var l []SitiosTuristicos
+	var l []Municipios
 	qs = qs.OrderBy(sortFields...)
 	if _, err = qs.Limit(limit, offset).All(&l, fields...); err == nil {
 		if len(fields) == 0 {
@@ -134,14 +127,11 @@ func GetAllSitiosTuristicos(query map[string]string, fields []string, sortby []s
 	return nil, err
 }
 
-// UpdateSitiosTuristicos updates SitiosTuristicos by Id and returns error if
+// UpdateMunicipios updates Municipios by Id and returns error if
 // the record to be updated doesn't exist
-func UpdateSitiosTuristicosById(m *SitiosTuristicos) (err error) {
+func UpdateMunicipiosById(m *Municipios) (err error) {
 	o := orm.NewOrm()
-	if !m.Activo {
-		m.Activo = true
-	}
-	v := SitiosTuristicos{Id: m.Id}
+	v := Municipios{Id: m.Id}
 	// ascertain id exists in the database
 	if err = o.Read(&v); err == nil {
 		var num int64
@@ -152,15 +142,15 @@ func UpdateSitiosTuristicosById(m *SitiosTuristicos) (err error) {
 	return
 }
 
-// DeleteSitiosTuristicos deletes SitiosTuristicos by Id and returns error if
+// DeleteMunicipios deletes Municipios by Id and returns error if
 // the record to be deleted doesn't exist
-func DeleteSitiosTuristicos(id int) (err error) {
+func DeleteMunicipios(id int) (err error) {
 	o := orm.NewOrm()
-	v := SitiosTuristicos{Id: id}
+	v := Municipios{Id: id}
 	// ascertain id exists in the database
 	if err = o.Read(&v); err == nil {
 		var num int64
-		if num, err = o.Delete(&SitiosTuristicos{Id: id}); err == nil {
+		if num, err = o.Delete(&Municipios{Id: id}); err == nil {
 			fmt.Println("Number of records deleted in database:", num)
 		}
 	}

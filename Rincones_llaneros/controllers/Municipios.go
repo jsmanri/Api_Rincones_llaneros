@@ -11,13 +11,13 @@ import (
 	"github.com/astaxie/beego"
 )
 
-// UsuariosController operations for Usuarios
-type UsuariosController struct {
+// MunicipiosController operations for Municipios
+type MunicipiosController struct {
 	beego.Controller
 }
 
 // URLMapping ...
-func (c *UsuariosController) URLMapping() {
+func (c *MunicipiosController) URLMapping() {
 	c.Mapping("Post", c.Post)
 	c.Mapping("GetOne", c.GetOne)
 	c.Mapping("GetAll", c.GetAll)
@@ -27,17 +27,17 @@ func (c *UsuariosController) URLMapping() {
 
 // Post ...
 // @Title Post
-// @Description create Usuarios
-// @Param	body		body 	models.Usuarios	true		"body for Usuarios content"
-// @Success 201 {int} models.Usuarios
+// @Description create Municipios
+// @Param	body		body 	models.Municipios	true		"body for Municipios content"
+// @Success 201 {int} models.Municipios
 // @Failure 403 body is empty
 // @router / [post]
-func (c *UsuariosController) Post() {
-	var v models.Usuarios
+func (c *MunicipiosController) Post() {
+	var v models.Municipios
 	if err := json.Unmarshal(c.Ctx.Input.RequestBody, &v); err == nil {
-		if _, err := models.AddUsuarios(&v); err == nil {
+		if _, err := models.AddMunicipios(&v); err == nil {
 			c.Ctx.Output.SetStatus(201)
-			c.Data["json"] = map[string]interface{}{"success": true, "status": 201, "Message": "creado correctamente", "usuario creado": v}
+			c.Data["json"] = map[string]interface{}{"success": true, "status": 201, "Message": "Creado correctamente", "municipio creado": v}
 		} else {
 			c.Data["json"] = err.Error()
 		}
@@ -49,36 +49,36 @@ func (c *UsuariosController) Post() {
 
 // GetOne ...
 // @Title Get One
-// @Description get Usuarios by id
+// @Description get Municipios by id
 // @Param	id		path 	string	true		"The key for staticblock"
-// @Success 200 {object} models.Usuarios
+// @Success 200 {object} models.Municipios
 // @Failure 403 :id is empty
 // @router /:id [get]
-func (c *UsuariosController) GetOne() {
+func (c *MunicipiosController) GetOne() {
 	idStr := c.Ctx.Input.Param(":id")
 	id, _ := strconv.Atoi(idStr)
-	v, err := models.GetUsuariosById(id)
+	v, err := models.GetMunicipiosById(id)
 	if err != nil {
 		c.Data["json"] = err.Error()
 	} else {
-		c.Data["json"] = map[string]interface{}{"success": true, "status": 200, "Message": "consulta correctamente", "usuario consultados": v}
+		c.Data["json"] = map[string]interface{}{"success": true, "status": 200, "Message": "consulta correctamente", "municipio consultado": v}
 	}
 	c.ServeJSON()
 }
 
 // GetAll ...
 // @Title Get All
-// @Description get Usuarios
+// @Description get Municipios
 // @Param	query	query	string	false	"Filter. e.g. col1:v1,col2:v2 ..."
 // @Param	fields	query	string	false	"Fields returned. e.g. col1,col2 ..."
 // @Param	sortby	query	string	false	"Sorted-by fields. e.g. col1,col2 ..."
 // @Param	order	query	string	false	"Order corresponding to each sortby field, if single value, apply to all sortby fields. e.g. desc,asc ..."
 // @Param	limit	query	string	false	"Limit the size of result set. Must be an integer"
 // @Param	offset	query	string	false	"Start position of result set. Must be an integer"
-// @Success 200 {object} models.Usuarios
+// @Success 200 {object} models.Municipios
 // @Failure 403
 // @router / [get]
-func (c *UsuariosController) GetAll() {
+func (c *MunicipiosController) GetAll() {
 	var fields []string
 	var sortby []string
 	var order []string
@@ -111,7 +111,7 @@ func (c *UsuariosController) GetAll() {
 		for _, cond := range strings.Split(v, ",") {
 			kv := strings.SplitN(cond, ":", 2)
 			if len(kv) != 2 {
-				c.Data["json"] = errors.New("error: invalid query key/value pair")
+				c.Data["json"] = errors.New("Error: invalid query key/value pair")
 				c.ServeJSON()
 				return
 			}
@@ -120,30 +120,30 @@ func (c *UsuariosController) GetAll() {
 		}
 	}
 
-	l, err := models.GetAllUsuarios(query, fields, sortby, order, offset, limit)
+	l, err := models.GetAllMunicipios(query, fields, sortby, order, offset, limit)
 	if err != nil {
 		c.Data["json"] = err.Error()
 	} else {
-		c.Data["json"] = map[string]interface{}{"success": true, "status": 200, "Message": "consulta correctamente", "usuarios consultados": l}
+		c.Data["json"] = map[string]interface{}{"success": true, "status": 200, "Message": "consulta correctamente", "municipios consultados": l}
 	}
 	c.ServeJSON()
 }
 
 // Put ...
 // @Title Put
-// @Description update the Usuarios
+// @Description update the Municipios
 // @Param	id		path 	string	true		"The id you want to update"
-// @Param	body		body 	models.Usuarios	true		"body for Usuarios content"
-// @Success 200 {object} models.Usuarios
+// @Param	body		body 	models.Municipios	true		"body for Municipios content"
+// @Success 200 {object} models.Municipios
 // @Failure 403 :id is not int
 // @router /:id [put]
-func (c *UsuariosController) Put() {
+func (c *MunicipiosController) Put() {
 	idStr := c.Ctx.Input.Param(":id")
 	id, _ := strconv.Atoi(idStr)
-	v := models.Usuarios{Id: id}
+	v := models.Municipios{Id: id}
 	if err := json.Unmarshal(c.Ctx.Input.RequestBody, &v); err == nil {
-		if err := models.UpdateUsuariosById(&v); err == nil {
-			c.Data["json"] = map[string]interface{}{"success": true, "status": 200, "Message": "Actualizacion correctamente", "usuario actualizado": v}
+		if err := models.UpdateMunicipiosById(&v); err == nil {
+			c.Data["json"] = map[string]interface{}{"success": true, "status": 200, "Message": "Actualizacion correctamente", "municipio actualizado": v}
 		} else {
 			c.Data["json"] = err.Error()
 		}
@@ -155,16 +155,16 @@ func (c *UsuariosController) Put() {
 
 // Delete ...
 // @Title Delete
-// @Description delete the Usuarios
+// @Description delete the Municipios
 // @Param	id		path 	string	true		"The id you want to delete"
 // @Success 200 {string} delete success!
 // @Failure 403 id is empty
 // @router /:id [delete]
-func (c *UsuariosController) Delete() {
+func (c *MunicipiosController) Delete() {
 	idStr := c.Ctx.Input.Param(":id")
 	id, _ := strconv.Atoi(idStr)
-	if err := models.DeleteUsuarios(id); err == nil {
-		c.Data["json"] = map[string]interface{}{"success": true, "status": 200, "Message": "Eliminacion correctamente", "usuario eliminado": id}
+	if err := models.DeleteMunicipios(id); err == nil {
+		c.Data["json"] = map[string]interface{}{"success": true, "status": 200, "Message": "Eliminacion correctamente", "municipio eliminado": id}
 	} else {
 		c.Data["json"] = err.Error()
 	}

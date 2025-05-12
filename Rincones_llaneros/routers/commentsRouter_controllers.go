@@ -7,7 +7,7 @@ import (
 
 func init() {
 
-    beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:CategoriasController"] = append(beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:CategoriasController"],
+    beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:CategoriasController"] = append(beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:CategoriasController"],
         beego.ControllerComments{
             Method: "Post",
             Router: "/",
@@ -16,7 +16,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:CategoriasController"] = append(beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:CategoriasController"],
+    beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:CategoriasController"] = append(beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:CategoriasController"],
         beego.ControllerComments{
             Method: "GetAll",
             Router: "/",
@@ -25,7 +25,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:CategoriasController"] = append(beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:CategoriasController"],
+    beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:CategoriasController"] = append(beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:CategoriasController"],
         beego.ControllerComments{
             Method: "GetOne",
             Router: "/:id",
@@ -34,7 +34,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:CategoriasController"] = append(beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:CategoriasController"],
+    beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:CategoriasController"] = append(beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:CategoriasController"],
         beego.ControllerComments{
             Method: "Put",
             Router: "/:id",
@@ -43,7 +43,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:CategoriasController"] = append(beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:CategoriasController"],
+    beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:CategoriasController"] = append(beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:CategoriasController"],
         beego.ControllerComments{
             Method: "Delete",
             Router: "/:id",
@@ -52,7 +52,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:ComentariosController"] = append(beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:ComentariosController"],
+    beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:ComentariosController"] = append(beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:ComentariosController"],
         beego.ControllerComments{
             Method: "Post",
             Router: "/",
@@ -61,7 +61,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:ComentariosController"] = append(beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:ComentariosController"],
+    beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:ComentariosController"] = append(beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:ComentariosController"],
         beego.ControllerComments{
             Method: "GetAll",
             Router: "/",
@@ -70,7 +70,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:ComentariosController"] = append(beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:ComentariosController"],
+    beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:ComentariosController"] = append(beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:ComentariosController"],
         beego.ControllerComments{
             Method: "GetOne",
             Router: "/:id",
@@ -79,7 +79,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:ComentariosController"] = append(beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:ComentariosController"],
+    beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:ComentariosController"] = append(beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:ComentariosController"],
         beego.ControllerComments{
             Method: "Put",
             Router: "/:id",
@@ -88,7 +88,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:ComentariosController"] = append(beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:ComentariosController"],
+    beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:ComentariosController"] = append(beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:ComentariosController"],
         beego.ControllerComments{
             Method: "Delete",
             Router: "/:id",
@@ -97,7 +97,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:CredencialesController"] = append(beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:CredencialesController"],
+    beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:CredencialesController"] = append(beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:CredencialesController"],
         beego.ControllerComments{
             Method: "Post",
             Router: "/",
@@ -106,7 +106,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:CredencialesController"] = append(beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:CredencialesController"],
+    beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:CredencialesController"] = append(beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:CredencialesController"],
         beego.ControllerComments{
             Method: "GetAll",
             Router: "/",
@@ -115,7 +115,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:CredencialesController"] = append(beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:CredencialesController"],
+    beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:CredencialesController"] = append(beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:CredencialesController"],
         beego.ControllerComments{
             Method: "GetOne",
             Router: "/:id",
@@ -124,7 +124,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:CredencialesController"] = append(beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:CredencialesController"],
+    beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:CredencialesController"] = append(beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:CredencialesController"],
         beego.ControllerComments{
             Method: "Put",
             Router: "/:id",
@@ -133,7 +133,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:CredencialesController"] = append(beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:CredencialesController"],
+    beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:CredencialesController"] = append(beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:CredencialesController"],
         beego.ControllerComments{
             Method: "Delete",
             Router: "/:id",
@@ -142,7 +142,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:EventosController"] = append(beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:EventosController"],
+    beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:EventosController"] = append(beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:EventosController"],
         beego.ControllerComments{
             Method: "Post",
             Router: "/",
@@ -151,7 +151,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:EventosController"] = append(beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:EventosController"],
+    beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:EventosController"] = append(beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:EventosController"],
         beego.ControllerComments{
             Method: "GetAll",
             Router: "/",
@@ -160,7 +160,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:EventosController"] = append(beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:EventosController"],
+    beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:EventosController"] = append(beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:EventosController"],
         beego.ControllerComments{
             Method: "GetOne",
             Router: "/:id",
@@ -169,7 +169,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:EventosController"] = append(beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:EventosController"],
+    beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:EventosController"] = append(beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:EventosController"],
         beego.ControllerComments{
             Method: "Put",
             Router: "/:id",
@@ -178,7 +178,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:EventosController"] = append(beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:EventosController"],
+    beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:EventosController"] = append(beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:EventosController"],
         beego.ControllerComments{
             Method: "Delete",
             Router: "/:id",
@@ -187,7 +187,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:RankingController"] = append(beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:RankingController"],
+    beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:MunicipiosController"] = append(beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:MunicipiosController"],
         beego.ControllerComments{
             Method: "Post",
             Router: "/",
@@ -196,7 +196,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:RankingController"] = append(beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:RankingController"],
+    beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:MunicipiosController"] = append(beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:MunicipiosController"],
         beego.ControllerComments{
             Method: "GetAll",
             Router: "/",
@@ -205,7 +205,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:RankingController"] = append(beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:RankingController"],
+    beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:MunicipiosController"] = append(beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:MunicipiosController"],
         beego.ControllerComments{
             Method: "GetOne",
             Router: "/:id",
@@ -214,7 +214,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:RankingController"] = append(beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:RankingController"],
+    beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:MunicipiosController"] = append(beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:MunicipiosController"],
         beego.ControllerComments{
             Method: "Put",
             Router: "/:id",
@@ -223,7 +223,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:RankingController"] = append(beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:RankingController"],
+    beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:MunicipiosController"] = append(beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:MunicipiosController"],
         beego.ControllerComments{
             Method: "Delete",
             Router: "/:id",
@@ -232,7 +232,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:RolesController"] = append(beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:RolesController"],
+    beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:RolesController"] = append(beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:RolesController"],
         beego.ControllerComments{
             Method: "Post",
             Router: "/",
@@ -241,7 +241,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:RolesController"] = append(beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:RolesController"],
+    beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:RolesController"] = append(beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:RolesController"],
         beego.ControllerComments{
             Method: "GetAll",
             Router: "/",
@@ -250,7 +250,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:RolesController"] = append(beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:RolesController"],
+    beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:RolesController"] = append(beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:RolesController"],
         beego.ControllerComments{
             Method: "GetOne",
             Router: "/:id",
@@ -259,7 +259,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:RolesController"] = append(beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:RolesController"],
+    beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:RolesController"] = append(beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:RolesController"],
         beego.ControllerComments{
             Method: "Put",
             Router: "/:id",
@@ -268,7 +268,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:RolesController"] = append(beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:RolesController"],
+    beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:RolesController"] = append(beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:RolesController"],
         beego.ControllerComments{
             Method: "Delete",
             Router: "/:id",
@@ -277,7 +277,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:SitiosTuristicosController"] = append(beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:SitiosTuristicosController"],
+    beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:SitiosTuristicosController"] = append(beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:SitiosTuristicosController"],
         beego.ControllerComments{
             Method: "Post",
             Router: "/",
@@ -286,7 +286,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:SitiosTuristicosController"] = append(beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:SitiosTuristicosController"],
+    beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:SitiosTuristicosController"] = append(beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:SitiosTuristicosController"],
         beego.ControllerComments{
             Method: "GetAll",
             Router: "/",
@@ -295,7 +295,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:SitiosTuristicosController"] = append(beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:SitiosTuristicosController"],
+    beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:SitiosTuristicosController"] = append(beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:SitiosTuristicosController"],
         beego.ControllerComments{
             Method: "GetOne",
             Router: "/:id",
@@ -304,7 +304,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:SitiosTuristicosController"] = append(beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:SitiosTuristicosController"],
+    beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:SitiosTuristicosController"] = append(beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:SitiosTuristicosController"],
         beego.ControllerComments{
             Method: "Put",
             Router: "/:id",
@@ -313,7 +313,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:SitiosTuristicosController"] = append(beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:SitiosTuristicosController"],
+    beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:SitiosTuristicosController"] = append(beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:SitiosTuristicosController"],
         beego.ControllerComments{
             Method: "Delete",
             Router: "/:id",
@@ -322,7 +322,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:UsuariosController"] = append(beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:UsuariosController"],
+    beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:UsuariosController"] = append(beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:UsuariosController"],
         beego.ControllerComments{
             Method: "Post",
             Router: "/",
@@ -331,7 +331,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:UsuariosController"] = append(beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:UsuariosController"],
+    beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:UsuariosController"] = append(beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:UsuariosController"],
         beego.ControllerComments{
             Method: "GetAll",
             Router: "/",
@@ -340,7 +340,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:UsuariosController"] = append(beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:UsuariosController"],
+    beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:UsuariosController"] = append(beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:UsuariosController"],
         beego.ControllerComments{
             Method: "GetOne",
             Router: "/:id",
@@ -349,7 +349,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:UsuariosController"] = append(beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:UsuariosController"],
+    beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:UsuariosController"] = append(beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:UsuariosController"],
         beego.ControllerComments{
             Method: "Put",
             Router: "/:id",
@@ -358,7 +358,7 @@ func init() {
             Filters: nil,
             Params: nil})
 
-    beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:UsuariosController"] = append(beego.GlobalControllerRouter["github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers:UsuariosController"],
+    beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:UsuariosController"] = append(beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:UsuariosController"],
         beego.ControllerComments{
             Method: "Delete",
             Router: "/:id",

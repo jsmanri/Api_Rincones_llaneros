@@ -8,7 +8,7 @@
 package routers
 
 import (
-	"github.com/jsmanri/Api_Rincones_llaneros/Rincones_llaneros/controllers"
+	"github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers"
 
 	"github.com/astaxie/beego"
 )
@@ -19,12 +19,6 @@ func init() {
 		beego.NSNamespace("/Credenciales",
 			beego.NSInclude(
 				&controllers.CredencialesController{},
-			),
-		),
-
-		beego.NSNamespace("/Usuarios",
-			beego.NSInclude(
-				&controllers.UsuariosController{},
 			),
 		),
 
@@ -43,6 +37,18 @@ func init() {
 		beego.NSNamespace("/Sitios_Turisticos",
 			beego.NSInclude(
 				&controllers.SitiosTuristicosController{},
+			),
+		),
+
+		beego.NSNamespace("/Usuarios",
+			beego.NSInclude(
+				&controllers.UsuariosController{},
+			),
+		),
+
+		beego.NSNamespace("/Municipios",
+			beego.NSInclude(
+				&controllers.MunicipiosController{},
 			),
 		),
 
