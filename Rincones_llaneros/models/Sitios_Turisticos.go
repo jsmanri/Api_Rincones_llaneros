@@ -18,6 +18,7 @@ type SitiosTuristicos struct {
 	Horario                   string      `orm:"column(Horario)"`
 	IdUsuario                 *Usuarios   `orm:"column(Id_Usuario);rel(fk)"`
 	IdCategoria               *Categorias `orm:"column(Id_Categoria);rel(fk)"`
+	IdMunicipios              *Municipios `orm:"column(Id_Municipio);rel(fk)"`
 	FotoSitio                 string      `orm:"column(Foto_Sitio);type(text)"`
 	FechaCreacion             time.Time   `orm:"column(Fecha_creacion);type(timestamp with time zone);auto_now_add"`
 	FechaModifcacion          time.Time   `orm:"column(Fecha_modifcacion);type(timestamp with time zone);auto_now"`
