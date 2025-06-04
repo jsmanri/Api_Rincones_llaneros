@@ -18,7 +18,7 @@ func main() {
 		// Permitimos solicitudes de todos los orígenes
 		AllowAllOrigins: true,
 		// Permitimos los métodos que serán necesarios
-		AllowMethods: []string{"GET", "POST", "PUT", "DELETE", "OPTIONS"},
+		AllowMethods: []string{"GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"},
 		// Permitimos estos encabezados
 		AllowHeaders: []string{"Origin", "Content-Type", "Authorization"},
 		// Permitir credenciales si es necesario

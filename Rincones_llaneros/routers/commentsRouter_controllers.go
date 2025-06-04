@@ -360,6 +360,15 @@ func init() {
 
     beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:UsuariosController"] = append(beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:UsuariosController"],
         beego.ControllerComments{
+            Method: "Patch",
+            Router: "/:id",
+            AllowHTTPMethods: []string{"patch"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
+    beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:UsuariosController"] = append(beego.GlobalControllerRouter["github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros/controllers:UsuariosController"],
+        beego.ControllerComments{
             Method: "Delete",
             Router: "/:id",
             AllowHTTPMethods: []string{"delete"},
