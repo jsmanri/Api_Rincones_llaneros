@@ -1,6 +1,6 @@
 module github.com/sena_2824182/Api_Rincones_llaneros/Rincones_llaneros
 
-go 1.24.0
+go 1.23.1
 
 require (
 	github.com/astaxie/beego v1.12.3

@@ -18,6 +18,7 @@ type SitiosTuristicos struct {
 	Horario                   string      `orm:"column(Horario)"`
 	IdUsuario                 *Usuarios   `orm:"column(Id_Usuario);rel(fk)"`
 	IdCategoria               *Categorias `orm:"column(Id_Categoria);rel(fk)"`
+	IdMunicipio               *Municipios `orm:"column(Id_Municipio);rel(fk)"`
 	FotoSitio                 string      `orm:"column(Foto_Sitio);type(text)"`
 	FechaCreacion             time.Time   `orm:"column(Fecha_creacion);type(timestamp with time zone);auto_now_add"`
 	FechaModifcacion          time.Time   `orm:"column(Fecha_modifcacion);type(timestamp with time zone);auto_now"`
@@ -48,12 +49,18 @@ func AddSitiosTuristicos(m *SitiosTuristicos) (id int64, err error) {
 // GetSitiosTuristicosById retrieves SitiosTuristicos by Id. Returns error if
 // Id doesn't exist
 func GetSitiosTuristicosById(id int) (v *SitiosTuristicos, err error) {
-	o := orm.NewOrm()
-	v = &SitiosTuristicos{Id: id}
-	if err = o.Read(v); err == nil {
-		return v, nil
-	}
-	return nil, err
+    o := orm.NewOrm()
+    v = &SitiosTuristicos{Id: id}
+
+    // Cargar la relación con IdUsuario y los comentarios si están relacionados
+    if err = o.QueryTable(new(SitiosTuristicos)).
+        Filter("Id", id).
+        RelatedSel(). // Cargar relaciones
+        One(v); err == nil {
+        return v, nil
+    }
+    
+    return nil, err
 }
 
 // GetAllSitiosTuristicos retrieves all SitiosTuristicos matches certain condition. Returns empty list if
